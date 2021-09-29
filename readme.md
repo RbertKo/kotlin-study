@@ -1,4 +1,4 @@
-# Studing Kotlin
+# Studying Kotlin
 
 ## Install kotlin CLI compiler
 
