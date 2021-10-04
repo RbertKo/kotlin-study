@@ -1,3 +1,6 @@
+import kotlin.coroutines.runBlocking
+import kotlin.coroutines.delay
+
 Thread(Runnable {
     for(i in 1..10) {
         Thread.sleep(1000L)
@@ -6,8 +9,9 @@ Thread(Runnable {
 }).start()
 
 GlobalScope.launch() {
-    repeat(10) {
-        delay(1000L)
+    runBlocking {
         print("I'm working in Coroutine.")
+        delay(200L)
+        print("done")
     }
 }
